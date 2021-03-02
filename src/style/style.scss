@@ -1,0 +1,220 @@
+/*
+.breadcrumb {
+  background-color: transparent;
+  font-size: 12px;
+  padding: 0.75rem 0;
+  margin-bottom: 0;
+}
+.breadcrumb-item.active {
+  color: #f5ae79;
+}
+.breadcrumb a {
+  color: #707070;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/* 分隔線 */
+
+.calc-hr {
+  width: 100%;
+  border-top: 2px solid #e2e2e2;
+}
+
+/* 按鈕樣式 */
+/* Class：btn primary md */
+
+.important-btn {
+  color: #fff;
+  text-align: center;
+  background: #51a9aa;
+  border-radius: 100px;
+}
+
+.important-btn:hover {
+  color: #fff;
+  background: #62c8c9;
+}
+
+.primary-btn {
+  color: #fff;
+  text-align: center;
+  background-color: #e4955a;
+  border-radius: 200px;
+}
+
+.primary-btn:hover {
+  color: #fff;
+  background-color: #f5ae79;
+}
+
+.btn.lg {
+  width: 269px;
+  height: 60px;
+  font-size: 14px;
+}
+.btn.md {
+  width: 185px;
+  height: 50px;
+  font-size: 14px;
+}
+.btn.sm {
+  width: 89px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+/* 文字樣式 */
+
+.primary-text {
+  color: #e4955a;
+}
+.danger-text {
+  color: #d84f5c;
+}
+.important-text {
+  color: #51a9aa;
+}
+
+/* input樣式 */
+/* classname 要加 form-control */
+
+.form-control::placeholder {
+  opacity: 0.5;
+}
+
+.primary-input {
+  font-size: 14px;
+  height: calc(1.5em + 0.75rem + 2px);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.527);
+  border: 0px;
+  border-bottom: 2px solid #e4955a;
+}
+.primary-input:focus {
+  border-color: #e4955a;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 0.2rem rgb(228 149 88 / 25%);
+  outline: 0;
+}
+.primary-input ::placeholder {
+  line-height: calc(1.5em + 0.75rem + 2px);
+}
+
+.primary-select {
+  width: 307px;
+  height: 45px;
+  font-size: 14px;
+  color: #707070;
+  border-bottom: solid 2px #e4955a;
+  padding: 0 1rem;
+  border-radius: 0px;
+}
+.form-check-label {
+  font-size: 14px;
+}
+
+.MyPosition span {
+  color: white;
+  background-color: rgba(31, 31, 31, 0.712);
+  padding: 4px;
+  border-radius: 5px;
+}
+.MyTarget span {
+  white-space: nowrap;
+  color: white;
+  background-color: rgba(31, 31, 31, 0.712);
+  padding: 4px;
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.MyTarget span:hover {
+  background-color: rgba(155, 104, 63, 0.952);
+  padding: 8px;
+}
+
+.MyList {
+  position: absolute;
+  z-index: 2;
+  left: 3rem;
+  bottom: 2rem;
+  color: rgb(37, 71, 116);
+  font-weight: bold;
+  background-color: rgba(214, 143, 85, 0.657);
+  padding: 8px;
+  border-radius: 10px;
+  width: 350px;
+  height: 400px;
+  overflow: auto;
+}
+
+.ListItem:hover {
+  cursor: pointer;
+  background-color: white;
+}
+
+#style-3::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(214, 143, 85, 0.657);
+}
+
+#style-3::-webkit-scrollbar {
+  width: 6px;
+  background-color: rgba(214, 143, 85, 0.657);
+}
+
+#style-3::-webkit-scrollbar-thumb {
+  background-color: #f8f8f8;
+}
+
+.SearchList {
+  width: 300px;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+.SearchList div {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.527);
+}
+.SearchList div:hover {
+  color: white;
+  background-color: rgba(214, 143, 85, 0.657);
+}
+.addtocart-success-modal .modal-header {
+  font-size: 30px;
+  border-bottom: none;
+}
+
+.addtocart-success-modal .modal-footer {
+  border-top: none;
+}
+
+.addtocart-success-modal .checkmark {
+  height: 100px;
+}
+
+.addtocart-success-modal h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.addtocart-success-modal p {
+  font-size: 19px;
+}
+
+.modalTable {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #e4955a;
+}
+.isOPEN {
+  font-weight: bold;
+  color: #2b752f;
+}
+.isCLOSE {
+  font-weight: bold;
+  color: #d84f5c;
+}
