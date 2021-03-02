@@ -95,6 +95,57 @@ const SimpleMap = (props) => {
     }
   }
 
+  const SortBy = (Type) => {
+    console.log(places)
+    const tempList = [...places]
+    switch (Type) {
+      case 'NAME':
+        tempList.sort((a, b) => {
+          return a.name.length - b.name.length
+        })
+        setPlaces(tempList)
+
+        break
+      case 'R-NAME':
+        tempList.sort((a, b) => {
+          return b.name.length - a.name.length
+        })
+        setPlaces(tempList)
+
+        break
+      case 'DISTANCE':
+        const newList = tempList.map((v, i) => {
+          let temp = { ...v }
+          let distance =
+            Math.pow(v.geometry.location.lat() - myPosition.lat, 2) +
+            Math.pow(v.geometry.location.lng() - myPosition.lng, 2)
+
+          temp.distance = distance
+          return temp
+        })
+
+        newList.sort((a, b) => {
+          return a.distance - b.distance
+        })
+        console.log(newList)
+        setPlaces(newList)
+        break
+      case 'RATE':
+        tempList.sort((a, b) => {
+          return a.rating - b.rating
+        })
+        setPlaces(tempList)
+        break
+      case 'R-RATE':
+        tempList.sort((a, b) => {
+          return b.rating - a.rating
+        })
+        setPlaces(tempList)
+        break
+      default:
+        break
+    }
+  }
   /*
   CafeMaker :地圖上餐廳標記
   CafeList  :地圖上餐廳列表
@@ -264,6 +315,63 @@ const SimpleMap = (props) => {
           </div>
         </div>
         <div className="MyList d-flex flex-column" id="style-3">
+          <div className="d-flex icon-bar justify-content-between ">
+            <a
+              className="sort-icon"
+              onClick={(e) => {
+                e.preventDefault()
+                SortBy('DISTANCE')
+              }}
+              href="/"
+            >
+              <img src="/img/distance.png" alt="" />
+            </a>
+            <div className="d-flex">
+              <a
+                className="sort-icon sort-by-name ml-2"
+                onClick={(e) => {
+                  e.preventDefault()
+                  SortBy('NAME')
+                }}
+                href="/"
+              >
+                <img src="/img/sortbyName.png" alt="" />
+              </a>
+              <a
+                className="sort-icon sort-by-name ml-2"
+                onClick={(e) => {
+                  e.preventDefault()
+                  SortBy('R-NAME')
+                }}
+                href="/"
+              >
+                <img src="/img/sortbyName2.png" alt="" />
+              </a>
+            </div>
+
+            <div className="d-flex">
+              <a
+                className="sort-icon sort-by-name ml-2"
+                onClick={(e) => {
+                  e.preventDefault()
+                  SortBy('RATE')
+                }}
+                href="/"
+              >
+                <img src="/img/sortbyRate2.png" alt="" />
+              </a>
+              <a
+                className="sort-icon sort-by-name ml-2"
+                onClick={(e) => {
+                  e.preventDefault()
+                  SortBy('R-RATE')
+                }}
+                href="/"
+              >
+                <img src="/img/sortbyRate.png" alt="" />
+              </a>
+            </div>
+          </div>
           {places.map((v, i) => {
             return (
               <CafeList
