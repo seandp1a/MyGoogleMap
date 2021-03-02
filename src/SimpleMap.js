@@ -17,8 +17,8 @@ const MyPositionMarker = ({ text }) => (
 
 const SimpleMap = (props) => {
   const [myPosition, setMyPosition] = useState({
-    lat: 25.04,
-    lng: 121.5,
+    lat: 25.041715,
+    lng: 121.5546935,
   })
 
   const [mapApiLoaded, setMapApiLoaded] = useState(false)
@@ -475,8 +475,8 @@ const SimpleMap = (props) => {
 
 SimpleMap.defaultProps = {
   center: {
-    lat: 25.04,
-    lng: 121.5,
+    lat: 25.041715,
+    lng: 121.5546935,
   },
   zoom: 17,
 }
